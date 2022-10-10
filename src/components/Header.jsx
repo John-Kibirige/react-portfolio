@@ -34,7 +34,7 @@ const Header = () => {
         <div
           className={`nav-items ${
             menuClicked
-              ? 'block absolute top-24 border left-0 w-full h-[100vh]'
+              ? 'block absolute top-24 border left-0 w-full h-[100vh] z-20 bg-inherit'
               : 'hidden'
           } sm:block sm:static`}>
           <ul className="lists flex flex-col px-8 sm:flex-row sm:items-center">
@@ -82,7 +82,7 @@ const Header = () => {
             }`}></span>
           <span
             className={`bar w-6 h-0.5 block transition-all bg-white my-2 rounded ${
-              menuClicked && 'translate-x-16  '
+              menuClicked && 'translate-x-[500px]  '
             }`}></span>
           <span
             className={`bar w-6 h-0.5 block transition-all bg-white rounded  ${

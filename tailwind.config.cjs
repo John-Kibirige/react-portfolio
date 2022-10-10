@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         'zei-800': '#191765',
         'zei-400': '#9390ff',
+        'zei-600': '#7d73fc',
       },
     },
   },
