@@ -21,7 +21,7 @@ const Header = () => {
   });
 
   return (
-    <header className="header flex justify-between items-center border pl-4 pr-6 py-6 relative">
+    <header className="header flex justify-between items-center pl-4 pr-6 py-6 relative">
       <a
         href="#"
         className={`logo font-medium tracking-wide text-[18px] ${
@@ -34,11 +34,11 @@ const Header = () => {
         <div
           className={`nav-items ${
             menuClicked
-              ? 'block absolute top-24 border left-0 w-full h-[100vh] z-20 bg-inherit'
+              ? 'block absolute top-24 border left-0 w-full h-[100vh] z-50  bg-zei-800'
               : 'hidden'
           } sm:block sm:static`}>
           <ul className="lists flex flex-col px-8 sm:flex-row sm:items-center">
-            <li className="item mr-8">
+            <li className="item mr-2 sm:mr-8">
               {' '}
               <a
                 href="#portfolio"
@@ -47,7 +47,7 @@ const Header = () => {
                 <FiChevronRight className="text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden" />
               </a>
             </li>
-            <li className="item my-4 mr-8">
+            <li className="item mr-2 my-4 sm:mr-8">
               {' '}
               <a
                 href="#about"
@@ -56,7 +56,7 @@ const Header = () => {
                 <FiChevronRight className="text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden " />
               </a>
             </li>
-            <li className="item mb-4 sm:mb-0 mr-8">
+            <li className="item mr-2 mb-4 sm:mb-0 sm:mr-8">
               <a
                 href="#contact"
                 className="contact text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline">
