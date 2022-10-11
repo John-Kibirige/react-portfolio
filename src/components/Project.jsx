@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { isPopupClicked } from '../redux/popup/popup';
+import Popup from './Popup';
 
 const Project = (props) => {
-  const { image, title, description, technologies } = props;
+  const { image, title, description, technologies, github, liveLink, id } =
+    props;
+
+  const [clicked, setClicked] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const handleClose = () => {
+    dispatch(isPopupClicked());
+    setClicked(false);
+  };
+
+  const handleClick = () => {
+    dispatch(isPopupClicked());
+    setClicked((state) => !state);
+  };
+
   return (
     <section className="project mb-10 sm:mb-14">
       <div className="projects-container sm:flex sm:mx-[1vw] lg:mx-[9.1vw]  gap-6 sm:gap-4 lg:gap-6">
@@ -26,11 +45,24 @@ const Project = (props) => {
           </ul>
           <button
             className="see-pjt bg-zei-600 text-sm px-4 py-3 hover:bg-zei-400 transition-colors active:bg-zei-900 shadow-sm active:transition-none sm:mt-3"
-            type="button">
+            type="button"
+            onClick={handleClick}>
             See Project
           </button>
         </div>
       </div>
+
+      {clicked && (
+        <Popup
+          title={title}
+          image={image}
+          description={description}
+          technologies={technologies}
+          github={github}
+          liveLink={liveLink}
+          handleClose={() => handleClose()}
+        />
+      )}
     </section>
   );
 };
