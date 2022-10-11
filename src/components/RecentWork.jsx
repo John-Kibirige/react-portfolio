@@ -4,7 +4,8 @@ import data from '../data/data';
 
 const RecentWork = () => {
   const projectElements = data.map((project) => {
-    const { image, title, description, technologies, id } = project;
+    const { image, title, description, technologies, id, github, liveLink } =
+      project;
     return (
       <Project
         key={id}
@@ -12,6 +13,9 @@ const RecentWork = () => {
         title={title}
         description={description}
         technologies={technologies}
+        github={github}
+        liveLink={liveLink}
+        id={id}
       />
     );
   });
