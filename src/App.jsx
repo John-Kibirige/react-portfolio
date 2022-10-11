@@ -6,7 +6,7 @@ import Socials from './components/Socials';
 
 function App() {
   return (
-    <div className="App px-5 -z-50">
+    <div className="App px-6 -z-50">
       <Header />
       <Introduction />
       <Skills />
