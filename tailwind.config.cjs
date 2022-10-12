@@ -12,6 +12,7 @@ module.exports = {
         'zei-400': '#9390ff',
         'zei-600': '#7d73fc',
         'zei-900': '#5e42d7',
+        'zei-dark': '#383867',
       },
     },
   },

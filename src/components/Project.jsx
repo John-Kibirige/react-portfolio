@@ -4,7 +4,7 @@ import { isPopupClicked } from '../redux/popup/popup';
 import Popup from './Popup';
 
 const Project = (props) => {
-  const { image, title, description, technologies, github, liveLink, id } =
+  const { image, title, description, technologies, github, liveLink, index } =
     props;
 
   const [clicked, setClicked] = useState(false);
@@ -22,12 +22,18 @@ const Project = (props) => {
   };
 
   return (
-    <section className="project mb-10 sm:mb-14">
+    <section className="project mb-10 sm:mb-14 transition-all relative">
       <div className="projects-container sm:flex sm:mx-[1vw] lg:mx-[9.1vw]  gap-6 sm:gap-4 lg:gap-6">
-        <div className="img-cont sm:w-3/5">
+        <div
+          className={`img-cont sm:w-3/5 ${
+            index % 2 === 1 ? 'order-2' : 'order-1'
+          }`}>
           <img src={image} alt={title} className="w-[100%] min-h-[237px]" />
         </div>
-        <div className="text-cont mt-10 sm:w-2/5 sm:mt-0 lg:mt-4">
+        <div
+          className={`text-cont mt-10 sm:w-2/5 sm:mt-0 lg:mt-4 ${
+            index % 2 === 1 ? 'order-1' : 'order-2'
+          }`}>
           <h3 className="title text-3xl font-medium mb-6 sm:mb-1 lg:mb-6">
             {title}
           </h3>
@@ -52,17 +58,19 @@ const Project = (props) => {
         </div>
       </div>
 
-      {clicked && (
-        <Popup
-          title={title}
-          image={image}
-          description={description}
-          technologies={technologies}
-          github={github}
-          liveLink={liveLink}
-          handleClose={() => handleClose()}
-        />
-      )}
+      <div className="popup-container absolute top-0">
+        {clicked && (
+          <Popup
+            title={title}
+            image={image}
+            description={description}
+            technologies={technologies}
+            github={github}
+            liveLink={liveLink}
+            handleClose={() => handleClose()}
+          />
+        )}
+      </div>
     </section>
   );
 };

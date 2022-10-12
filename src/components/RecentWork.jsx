@@ -3,7 +3,7 @@ import Project from './Project';
 import data from '../data/data';
 
 const RecentWork = () => {
-  const projectElements = data.map((project) => {
+  const projectElements = data.map((project, index) => {
     const { image, title, description, technologies, id, github, liveLink } =
       project;
     return (
@@ -16,6 +16,7 @@ const RecentWork = () => {
         github={github}
         liveLink={liveLink}
         id={id}
+        index={index}
       />
     );
   });
