@@ -1,3 +1,4 @@
+import Contact from './components/Contact';
 import Header from './components/Header';
 import Introduction from './components/Introduction';
 import RecentWork from './components/RecentWork';
@@ -12,6 +13,7 @@ function App() {
       <Skills />
       <Socials />
       <RecentWork />
+      <Contact />
     </div>
   );
 }

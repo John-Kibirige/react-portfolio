@@ -18,7 +18,9 @@ const Popup = (props) => {
         className="text-3xl absolute right-4 top-4 cursor-pointer"
         onClick={handleClose}
       />
-      <h3 className="title my-6 text-xl font-medium sm:text-3xl">{title}</h3>
+      <h3 className="title mb-6 mt-10 text-xl font-medium sm:text-3xl">
+        {title}
+      </h3>
       <img
         src={image}
         alt={title}
