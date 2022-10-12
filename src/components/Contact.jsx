@@ -12,7 +12,7 @@ const Contact = () => {
   const handleChange = () => {};
 
   return (
-    <section className="contact sm:w-9/12 md:w-7/12 xl:1/2 sm:mx-auto">
+    <section className="contact sm:w-9/12 md:w-7/12 xl:1/2 sm:mx-auto  px-6">
       <div className="contact-text">
         <h3 className="contact-us uppercase text-zei-400 text-center text-3xl mb-5 sm:lowercase sm:font-bold sm:text-5xl">
           Let's chat
@@ -46,7 +46,7 @@ const Contact = () => {
           rows="10"
           placeholder="Write your message here "></textarea>
 
-        <button className="submit my-8 bg-zei-600 text-sm px-4 py-3 hover:bg-zei-400 transition-colors active:bg-zei-900 shadow-sm active:transition-none sm:mt-9 sm:mx-auto sm:block sm:px-12 sm:py-4 md:mt-24 mb-24">
+        <button className="submit my-8 bg-zei-600 text-sm px-4 py-3 hover:bg-zei-400 transition-colors active:bg-zei-900 shadow-sm active:transition-none sm:mt-9 mx-auto block sm:px-12 sm:py-4 md:mt-24 mb-20">
           Send
         </button>
       </form>
