@@ -75,7 +75,7 @@ const Header = () => {
           <div
             className={`shape-one ${
               menuClicked && windowSize < 640
-                ? 'h-[400px] w-[226px] bg-gray-300 rounded-[50%] rotate-[25deg] absolute top-5 left-[-80px] filter blur-3xl -z-40'
+                ? 'h-[400px] w-[226px] bg-gray-300 rounded-[50%] rotate-[25deg] absolute top-5 left-[-80px] filter blur-3xl -z-40 opacity-60'
                 : ''
             } `}></div>
 

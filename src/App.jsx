@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { GrDocumentCloud } from 'react-icons/gr';
 import { useSelector } from 'react-redux';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -9,8 +11,18 @@ import Socials from './components/Socials';
 
 function App() {
   const { popupClicked } = useSelector((state) => state.popup);
+  useEffect(() => {
+    if (popupClicked) {
+      document.body.classList.add('overflow-hidden');
+    }
+  }, [popupClicked]);
+
+  // document.body.classList.add('overflow-hidden');
   return (
-    <div className={`App scroll-smooth ${popupClicked && 'bg-white/25'}`}>
+    <div
+      className={`App scroll-smooth overflow-auto ${
+        popupClicked && 'bg-white/25'
+      }`}>
       <Header />
       <Introduction />
       <Skills />
