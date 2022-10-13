@@ -12,7 +12,9 @@ const Contact = () => {
   const handleChange = () => {};
 
   return (
-    <section className="contact sm:w-9/12 md:w-7/12 xl:1/2 sm:mx-auto  px-6">
+    <section
+      className="contact sm:w-9/12 md:w-7/12 xl:1/2 sm:mx-auto  px-6"
+      id="contact">
       <div className="contact-text">
         <h3 className="contact-us uppercase text-zei-400 text-center text-3xl mb-5 sm:lowercase sm:font-bold sm:text-5xl">
           Let's chat

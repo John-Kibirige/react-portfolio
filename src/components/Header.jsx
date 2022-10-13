@@ -66,7 +66,7 @@ const Header = () => {
             </li>
             <li className="item hidden sm:block">
               {' '}
-              <a href="#contact">
+              <a href="#email">
                 <HiOutlineMail className="hover:text-zei-400 text-xl" />
               </a>
             </li>
