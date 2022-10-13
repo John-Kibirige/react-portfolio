@@ -34,7 +34,7 @@ const Header = () => {
         <div
           className={`nav-items ${
             menuClicked
-              ? 'block absolute top-24 border left-0 w-full h-[100vh] z-50  bg-zei-800'
+              ? 'block absolute top-24 left-0 w-full h-[100vh] z-50  bg-zei-800'
               : 'hidden'
           } sm:block sm:static`}>
           <ul className="lists flex flex-col px-8 sm:flex-row sm:items-center">
@@ -71,6 +71,20 @@ const Header = () => {
               </a>
             </li>
           </ul>
+
+          <div
+            className={`shape-one ${
+              menuClicked && windowSize < 640
+                ? 'h-[400px] w-[226px] bg-gray-300 rounded-[50%] rotate-[25deg] absolute top-5 left-[-80px] filter blur-3xl -z-40'
+                : ''
+            } `}></div>
+
+          <div
+            className={`shape-two ${
+              menuClicked && windowSize
+                ? 'h-[420px] w-[244px] bg-gray-200 rotate-[-40deg] absolute bottom-0 right-[-90px] rounded-[50%] filter blur-2xl'
+                : ''
+            }`}></div>
         </div>
 
         <div
