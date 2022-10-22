@@ -21,7 +21,7 @@ const Header = () => {
   });
 
   return (
-    <header className="header flex justify-between items-center pl-4 pr-6 py-6 relative">
+    <header className="header flex justify-between items-center pl-4 pr-6 py-6 relative sm:px-16 lg:px-20">
       <a
         href="#"
         className={`logo font-medium tracking-wide text-[18px] ${
