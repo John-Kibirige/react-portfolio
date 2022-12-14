@@ -3,6 +3,7 @@ import { HiOutlineMail, FiChevronRight } from 'react-icons/all';
 
 const Header = () => {
   const [menuClicked, setMenu] = useState(false);
+
   const toggleMenu = () => {
     setMenu((prev) => !prev);
   };
@@ -12,7 +13,7 @@ const Header = () => {
     window.addEventListener('resize', () => {
       setWindowSize(window.innerWidth);
     });
-    
+
     if (windowSize >= 640) {
       setMenu(false);
     }
@@ -21,6 +22,14 @@ const Header = () => {
   const handleActiveLink = () => {
     setMenu(false);
   };
+
+  useEffect(() => {
+    if (menuClicked) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [menuClicked]);
 
   return (
     <header className='header flex justify-between items-center pl-4 pr-6 py-6 relative sm:px-16 lg:px-20'>
