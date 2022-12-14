@@ -12,18 +12,20 @@ const Header = () => {
     window.addEventListener('resize', () => {
       setWindowSize(window.innerWidth);
     });
-  });
-
-  useEffect(() => {
+    
     if (windowSize >= 640) {
       setMenu(false);
     }
   });
 
+  const handleActiveLink = () => {
+    setMenu(false);
+  };
+
   return (
-    <header className="header flex justify-between items-center pl-4 pr-6 py-6 relative sm:px-16 lg:px-20">
+    <header className='header flex justify-between items-center pl-4 pr-6 py-6 relative sm:px-16 lg:px-20'>
       <a
-        href="#"
+        href='#'
         className={`logo font-medium tracking-wide text-[18px] ${
           menuClicked && 'invisible'
         }`}>
@@ -37,37 +39,40 @@ const Header = () => {
               ? 'block absolute top-24 left-0 w-full h-[100vh] z-50  bg-zei-800'
               : 'hidden'
           } sm:block sm:static`}>
-          <ul className="lists flex flex-col px-8 sm:flex-row sm:items-center">
-            <li className="item mr-2 sm:mr-8">
+          <ul className='lists flex flex-col px-8 sm:flex-row sm:items-center'>
+            <li className='item mr-2 sm:mr-8'>
               {' '}
               <a
-                href="#portfolio"
-                className="portfolio text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline">
+                href='#portfolio'
+                className='portfolio text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline'
+                onClick={handleActiveLink}>
                 Portfolio{' '}
-                <FiChevronRight className="text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden" />
+                <FiChevronRight className='text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden' />
               </a>
             </li>
-            <li className="item mr-2 my-4 sm:mr-8">
+            <li className='item mr-2 my-4 sm:mr-8'>
               {' '}
               <a
-                href="#about"
-                className="about  text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline">
+                href='#about'
+                className='about  text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline'
+                onClick={handleActiveLink}>
                 About
-                <FiChevronRight className="text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden " />
+                <FiChevronRight className='text-zei-400 text-xl transition-all cursor-pointer hover:border sm:hidden ' />
               </a>
             </li>
-            <li className="item mr-2 mb-4 sm:mb-0 sm:mr-8">
+            <li className='item mr-2 mb-4 sm:mb-0 sm:mr-8'>
               <a
-                href="#contact"
-                className="contact text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline">
+                href='#contact'
+                className='contact text-lg font-medium transition-all hover:text-zei-400 flex justify-between items-center sm:text-base sm:hover:underline'
+                onClick={handleActiveLink}>
                 Contact
-                <FiChevronRight className="text-zei-400 text-xl transition-all cursor-pointer hover:border  sm:hidden" />
+                <FiChevronRight className='text-zei-400 text-xl transition-all cursor-pointer hover:border  sm:hidden' />
               </a>
             </li>
-            <li className="item hidden sm:block">
+            <li className='item hidden sm:block'>
               {' '}
-              <a href="#email">
-                <HiOutlineMail className="hover:text-zei-400 text-xl" />
+              <a href='#email'>
+                <HiOutlineMail className='hover:text-zei-400 text-xl' />
               </a>
             </li>
           </ul>
@@ -88,7 +93,7 @@ const Header = () => {
         </div>
 
         <div
-          className="humbugger-menu cursor-pointer sm:hidden"
+          className='humbugger-menu cursor-pointer sm:hidden'
           onClick={toggleMenu}>
           <span
             className={`bar w-6 h-0.5 block transition-all bg-white rounded ${
