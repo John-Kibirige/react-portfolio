@@ -4,7 +4,7 @@ import SocialIcons from './SocialIcons';
 const Footer = () => {
   return (
     <section
-      className='footer border-t border-gray-500 pt-8 sm:flex sm:flex-col space-x-5 sm:items-center pb-7'
+      className='footer border-t border-gray-500 pt-8 sm:flex sm:flex-col sm:items-center pb-7'
       id='email'>
       <SocialIcons />
       <div className='email text-center mt-3 sm:text-xl sm:mt-0'>

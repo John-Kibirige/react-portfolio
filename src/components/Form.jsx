@@ -4,6 +4,8 @@ import React from 'react';
 const Form = () => {
   const [state, handleSubmit] = useForm('xyyvpnnk');
 
+  console.log('the errors in the project we do have ', state.errors);
+
   if (state.succeeded) {
     return <div>Thank you for signing up!</div>;
   }
@@ -13,15 +15,16 @@ const Form = () => {
         type='text'
         name='name '
         required
-        className='outline-none focus:ring-green-400 text-black w-full focus:ring-2 rounded placeholder:text-gray-500'
+        className='outline-none focus:ring-green-400 text-black w-full focus:ring-2 rounded placeholder:text-gray-500 focus:cursor-text md:py-3'
         placeholder='Enter your name'
       />
+
       <input
         type='email'
         name='email'
         required
         placeholder='Enter your email'
-        className='outline-none focus:ring-green-400 text-black w-full focus:ring-2 placeholder:text-gray-500 my-4'
+        className='outline-none focus:ring-green-400 text-black w-full focus:ring-2 placeholder:text-gray-500 my-4 md:py-3'
       />
       <textarea
         className='outline-none focus:ring-green-400 text-black w-full focus:ring-2 placeholder:text-gray-500 '
