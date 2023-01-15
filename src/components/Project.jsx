@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { isPopupClicked } from '../redux/popup/popup';
-import { blurSequence } from '../scripts/blur';
+import blurSequence from '../scripts/blur';
 import Popup from './Popup';
 
 const Project = (props) => {

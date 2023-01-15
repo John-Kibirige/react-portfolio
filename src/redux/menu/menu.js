@@ -9,7 +9,8 @@ const menuSlice = createSlice({
   initialState,
   reducers: {
     isMenuClicked: (state, action) => {
-      state.menuClicked = action.payload;
+      const st = state;
+      st.menuClicked = action.payload;
     },
   },
 });
