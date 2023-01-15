@@ -14,6 +14,10 @@ module.exports = {
         'zei-900': '#5e42d7',
         'zei-dark': '#383867',
       },
+      rotate: {
+        51: '51deg',
+        27: '27deg',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],

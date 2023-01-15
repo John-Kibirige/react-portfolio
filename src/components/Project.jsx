@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { isPopupClicked } from '../redux/popup/popup';
+import { blurSequence } from '../scripts/blur';
 import Popup from './Popup';
 
 const Project = (props) => {
@@ -26,13 +27,13 @@ const Project = (props) => {
       <div className='projects-container sm:flex sm:mx-[1vw] lg:mx-[9.1vw]  gap-6 sm:gap-4 lg:gap-6'>
         <div
           className={`img-cont sm:w-3/5 ${
-            index % 2 === 1 ? 'order-2' : 'order-1'
+            index % 2 === 1 ? 'order-1' : 'order-2'
           }`}>
           <img src={image} alt={title} className='w-[100%] min-h-[237px]' />
         </div>
         <div
           className={`text-cont mt-10 sm:w-2/5 sm:mt-0 lg:mt-4 ${
-            index % 2 === 1 ? 'order-1' : 'order-2'
+            index % 2 === 1 ? 'order-2' : 'order-1'
           }`}>
           <h3 className='title text-3xl font-medium mb-6 sm:mb-1 lg:mb-6'>
             {title}
@@ -71,6 +72,23 @@ const Project = (props) => {
           />
         )}
       </div>
+
+      {/* blur effects */}
+      {blurSequence(1).includes(index + 1) && (
+        <div className='absolute w-[316px] h-7 rotate-51 bg-white -left-24 bottom-36 md:bottom-0 md:-left-16 md:top-28 md:w-[406px] md:h-8 filter blur-xl opacity-40'></div>
+      )}
+
+      {blurSequence(2).includes(index + 1) && (
+        <div className='absolute w-[252px] h-12 -rotate-51 -right-28 bg-white bottom-64 md:h-16 md:-right-14 md:bottom-52 md:w-[427px] filter blur-xl opacity-40 rounded-[100%]'></div>
+      )}
+
+      {blurSequence(3).includes(index + 1) && (
+        <div className='absolute bg-slate-400 w-36 h-20 -left-7 rounded-[100%] bottom-44 -z-10 opacity-60 filter blur-xl md:bottom-5 md:opacity-40 md:bg-white md:left-24 md:w-44 md:h-[118px]'></div>
+      )}
+
+      {blurSequence(4).includes(index + 1) && (
+        <div className='absolute bg-slate-100 w-36 h-20 rounded-[100%] -right-8 bottom-[200px] rotate-27 md:top-0 md:w-72 md:h-24 md:-z-10 filter blur-xl opacity-40'></div>
+      )}
     </section>
   );
 };

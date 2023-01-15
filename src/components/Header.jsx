@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { HiOutlineMail, FiChevronRight } from 'react-icons/all';
+import { useDispatch } from 'react-redux';
+import { isMenuClicked } from '../redux/menu/menu';
 
 const Header = () => {
   const [menuClicked, setMenu] = useState(false);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(isMenuClicked(menuClicked));
+  }, [menuClicked]);
 
   const toggleMenu = () => {
     setMenu((prev) => !prev);
