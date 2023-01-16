@@ -46,7 +46,7 @@
     <li><a href="https://reactjs.org/"></a>React</li>
     <li><a href="https://redux.io/"></a>Redux</li>
     <li><a href="https://tailwindcss.com/docs"></a>TailwindCSS </li>
-    <li><a href="https://tailwindcss.com/docs"></a>TailwindCSS </li>
+    <li><a href="https://vitejs.dev/guide/"></a>Vite </li>
     <li><a href="https://formspree.io/"></a>Formspree</li>
 
   </ul>
