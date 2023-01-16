@@ -31,10 +31,10 @@ const projects = [
     description:
       'This is a tic tac toe game. It is set to be multiple players for now with additions soon to be made such that one is able to play with the computer.',
     image:
-      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/4e/1355688/66ed165685c5ed166f68e47caf9440e2-original.png',
-    technologies: ['React', 'Javascript', 'SAAS'],
-    github: 'https://github.com/John-Kibirige/tic-tac-toe',
-    liveLink: 'https://john-kibirige.github.io/tic-tac-toe/',
+      'https://user-images.githubusercontent.com/86767187/212717319-c4b1678f-f238-4d1b-8295-df3bbcc55278.PNG',
+    technologies: ['React', 'Redux', 'TailwindCSS'],
+    github: 'https://github.com/John-Kibirige/tic-tac-toe-game',
+    liveLink: 'https://astounding-brioche-80c688.netlify.app/',
   },
   {
     id: generateId(),
