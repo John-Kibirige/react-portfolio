@@ -16,14 +16,14 @@ const projects = [
 
   {
     id: generateId(),
-    title: 'Space Travelers Hub',
+    title: 'The Ontroise App',
     description:
-      'A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.',
+      'The Ontroise app is a mobile web application built with ruby on rails that enables you to manage your budget. You have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
     image:
-      'https://s3.amazonaws.com/poly-screenshots.angel.co/Project/6e/1355680/2ca2a76e7b120f664b4cfe8f4e8a347e-original.png',
-    technologies: ['React', 'Redux', 'SASS', 'Javascript'],
-    github: 'https://github.com/muskan2532150/Space-Travelers-Hub',
-    liveLink: 'https://muskan2532150.github.io/Space-Travelers-Hub/',
+      'https://user-images.githubusercontent.com/86767187/212697407-db4c245d-860f-47f0-8497-b164903313a9.PNG',
+    technologies: ['Ruby on rails', 'TailwindCSS'],
+    github: 'https://github.com/John-Kibirige/rails-budget-app',
+    liveLink: 'https://rails-budget-app-wtk2.onrender.com/',
   },
   {
     id: generateId(),
