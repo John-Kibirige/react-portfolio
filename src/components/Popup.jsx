@@ -15,7 +15,7 @@ const Popup = (props) => {
   return (
     <section className="popup border bg-zei-dark relative px-6 z-50 sm:mx-[9.1vw] h-[100vh] overflow-y-auto">
       <IoClose
-        className="text-3xl absolute right-4 top-4 cursor-pointer"
+        className="text-3xl absolute right-4 top-4 cursor-pointer hover:border transition-all"
         onClick={handleClose}
       />
       <h3 className="title mb-6 mt-10 text-xl font-medium sm:text-3xl">

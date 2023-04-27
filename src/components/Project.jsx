@@ -3,11 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { isPopupClicked } from "../redux/popup/popup";
 import blurSequence from "../scripts/blur";
 import Popup from "./Popup";
+
 const Project = (props) => {
   const { image, title, description, technologies, github, liveLink, index } =
     props;
-
-  const { popupClicked } = useSelector((state) => state.popup);
 
   const [clicked, setClicked] = useState(false);
 
@@ -41,9 +40,13 @@ const Project = (props) => {
         <div
           className={`img-cont sm:w-3/5 ${
             index % 2 === 1 ? "order-1" : "order-2"
-          }`}
+          } max-h-[385px] `}
         >
-          <img src={image} alt={title} className="w-[100%] min-h-[237px]" />
+          <img
+            src={image}
+            alt={title}
+            className=" block mx-auto w-full h-full"
+          />
         </div>
         <div
           className={`text-cont mt-10 sm:w-2/5 sm:mt-0 lg:mt-4 ${
