@@ -12,6 +12,15 @@ import Socials from './components/Socials';
 function App() {
   const { popupClicked } = useSelector((state) => state.popup);
 
+  useEffect(() => {
+    // set the scroll property of entire body when popup is clicked
+    if (popupClicked) {
+      document.body.style.overflow = 'hidden';
+    }else{
+      document.body.style.overflow = 'auto';
+    }
+  })
+
   return (
     <div className={`App scroll-smooth ${popupClicked && 'bg-white/25'}`}>
       <Header />
